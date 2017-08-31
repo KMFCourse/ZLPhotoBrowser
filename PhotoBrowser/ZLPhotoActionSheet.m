@@ -265,7 +265,7 @@ double const ScalePhotoWidth = 1000;
         [strongNav dismissViewControllerAnimated:YES completion:nil];
     }];
     self.preview = NO;
-    [self.sender.view addSubview:self];
+//    [self.sender.view addSubview:self];
     [self.sender showDetailViewController:nav sender:nil];
 }
 
