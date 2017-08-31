@@ -91,6 +91,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**选择视频回调，回调第一帧封面图片、对应的asset对象*/
 @property (nonatomic, copy) void (^selectVideoBlock)(UIImage *cover, PHAsset *asset) NS_DEPRECATED_IOS(2_0, 8_0, "pod 2.2.6版本之后已废弃，删除使用的地方即可， 统一通过selectImageBlock回调，后续将删除");
 
+/**取消回调*/
+@property (nonatomic, copy) void (^selectCancleBlock)();
+
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
 
 
