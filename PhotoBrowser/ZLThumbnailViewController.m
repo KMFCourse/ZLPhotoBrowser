@@ -120,11 +120,11 @@
 
 - (BOOL)forceTouchAvailable
 {
-    if (@available(iOS 9.0, *)) {
-        return self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
-    } else {
+//    if (@available(iOS 9.0, *)) {
+//        return self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
+//    } else {
         return NO;
-    }
+//    }
 }
 
 - (void)scrollToBottom
