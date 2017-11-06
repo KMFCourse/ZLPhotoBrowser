@@ -264,6 +264,7 @@ double const ScalePhotoWidth = 1000;
         }
         [strongNav dismissViewControllerAnimated:YES completion:nil];
     }];
+    
     self.preview = NO;
 //    [self.sender.view addSubview:self];
     [self.sender showDetailViewController:nav sender:nil];
@@ -400,11 +401,15 @@ double const ScalePhotoWidth = 1000;
 
 - (IBAction)btnCancel_Click:(id)sender
 {
-    if (self.arrSelectedModels.count) {
+    if (self.arrSelectedModels.count > 0) {
         [self requestSelPhotos:nil];
         return;
+    } else {
+        if (self.selectImageBlock) {
+            self.selectImageBlock(@[], @[], NO);
+        }
+        [self hide];
     }
-    [self hide];
 }
 
 - (void)changeCancelBtnTitle
